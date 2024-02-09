@@ -912,6 +912,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2083756157}
   - component: {fileID: 2083756158}
+  - component: {fileID: 2083756159}
+  - component: {fileID: 2083756160}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -927,7 +929,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083756156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 57.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1246258505}
@@ -951,3 +953,35 @@ MonoBehaviour:
   CameraAxisTransform: {fileID: 354653578}
   MinAngle: -30
   MaxAngle: 15
+--- !u!114 &2083756159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083756156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fae634614b149418b5d0fac6be3994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gravity: 9.8
+  JumpForce: 10
+--- !u!143 &2083756160
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083756156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.82
+  m_Radius: 0.29
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.91, z: 0}

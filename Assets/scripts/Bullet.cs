@@ -6,12 +6,17 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public int lifetime;
+    public float damage = 10;
+
+    
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         Invoke("DestroyBullet", lifetime);
+        
     }
 
     // Update is called once per frame
@@ -27,11 +32,24 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Damage(collision);
         DestroyBullet();
+
     }
 
     private void DestroyBullet()
     {
         Destroy(gameObject);
     }
+
+    private void Damage(Collision collision)
+    {
+        var enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.value -= damage;
+        }
+    }
+
+
 }

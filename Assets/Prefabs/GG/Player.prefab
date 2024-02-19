@@ -1538,6 +1538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tragetPoint: {fileID: 3752133559932477180}
   cameraLink: {fileID: 1806234019111859847}
+  targetInSkyDistanse: 21.62
 --- !u!1 &1806234019042756882
 GameObject:
   m_ObjectHideFlags: 0

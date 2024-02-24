@@ -8,6 +8,7 @@ public class CameraRotation : MonoBehaviour
     public Transform CameraAxisTransform;
     public float MinAngle;
     public float MaxAngle;
+    public Transform Camera;
 
 
 

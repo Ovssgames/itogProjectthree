@@ -337,6 +337,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153956473}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &169000030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7863331932684996200, guid: acc30bfbe7df0204284f98d65dd8767d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1806234018294926358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &169000031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169000030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a20fc263b956f46a73658926394fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &267440874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1650546149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2160,6 +2178,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 505429867200059767, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 505429867200059767, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 505429867200059767, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1806234018074944529, guid: acc30bfbe7df0204284f98d65dd8767d,
         type: 3}
       propertyPath: m_RootOrder
@@ -2220,5 +2253,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4032773446789970771, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1007530265513896085, guid: acc30bfbe7df0204284f98d65dd8767d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: acc30bfbe7df0204284f98d65dd8767d, type: 3}

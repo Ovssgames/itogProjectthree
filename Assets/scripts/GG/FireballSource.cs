@@ -7,6 +7,7 @@ public class FireballSource : MonoBehaviour
     public Transform tragetPoint;
     public Camera cameraLink;
     public float targetInSkyDistanse;
+    public GameObject player;
 
 
     // Start is called before the first frame update
@@ -23,7 +24,14 @@ public class FireballSource : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit))
         {
-            tragetPoint.position = hit.point;
+            if(hit.collider.gameObject != player)
+            {
+                tragetPoint.position = hit.point;
+            }
+            else
+            {
+                tragetPoint.position = ray.GetPoint(targetInSkyDistanse);
+            }
         }
         else
         {

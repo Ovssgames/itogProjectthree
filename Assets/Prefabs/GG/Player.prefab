@@ -272,6 +272,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraAxis: {fileID: 1770034837041523239}
   wishDistance: 2
+  zoomPosition: 0.45
+  speed: 10
+  isZoom: 1
 --- !u!1 &1770034835980021083
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +348,7 @@ MonoBehaviour:
   Speed: 500
   CameraAxisTransform: {fileID: 1770034837041523239}
   MinAngle: -30
-  MaxAngle: 30
+  MaxAngle: 20
   Camera: {fileID: 1770034835670220232}
 --- !u!114 &1770034835922421756
 MonoBehaviour:
@@ -519,7 +522,7 @@ MonoBehaviour:
   tragetPoint: {fileID: 1770034836242052161}
   cameraLink: {fileID: 1770034835670220235}
   targetInSkyDistanse: 21.62
-  player: {fileID: 0}
+  player: {fileID: 1770034835980021083}
 --- !u!1 &1770034837041523232
 GameObject:
   m_ObjectHideFlags: 0

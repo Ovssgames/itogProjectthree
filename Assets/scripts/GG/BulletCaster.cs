@@ -7,11 +7,13 @@ public class BulletCaster : MonoBehaviour
     public GameObject BulletPrefab;
     public Transform BulletGun;
 
+    private CameraCol _cameraCol;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame

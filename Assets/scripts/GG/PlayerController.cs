@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float Gravity = 9.8f;
     public float JumpForce;
     public float Speed;
+    public Animator animator;
 
     private float _fallVelocity = 0;
     private Vector3 _moveVector;
@@ -20,36 +21,46 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        controllerUp();
+    }
 
+    private void controllerUp()
+    {
         _moveVector = Vector3.zero;
-        
+        var runDirectionw = 0f;
+        var runDirectionh = 0f;
+
         if (Input.GetKeyDown(KeyCode.Space) && _CharacterController.isGrounded)
         {
             _fallVelocity = -JumpForce;
         }
 
-
         if (Input.GetKey(KeyCode.W))
         {
             _moveVector += transform.forward;
+            runDirectionh = 1;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             _moveVector -= transform.forward;
+            runDirectionh = -1;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             _moveVector += transform.right;
+            runDirectionw = 1;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             _moveVector -= transform.right;
+            runDirectionw = -1;
         }
 
-
+        animator.SetFloat("w", runDirectionw);
+        animator.SetFloat("h", runDirectionh);
     }
 
     private void FixedUpdate()

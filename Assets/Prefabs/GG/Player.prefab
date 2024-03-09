@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7013852185898920614
 RectTransform:
   m_ObjectHideFlags: 0
@@ -327,9 +327,9 @@ CharacterController:
   m_Radius: 0.29
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.92, z: 0}
+  m_Center: {x: 0, y: 0.91, z: 0}
 --- !u!114 &1770034835980021081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +362,7 @@ MonoBehaviour:
   Gravity: 9.8
   JumpForce: 10
   Speed: 5
+  animator: {fileID: 6532650889274572458}
 --- !u!114 &1770034835980021082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,8 +693,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2955420559475675069}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb888657a212ae2449d53d4d3847017a, type: 2}
+  m_Avatar: {fileID: 9000000, guid: e1f97bcde6a6d32488fe7bbaf9e43e81, type: 3}
+  m_Controller: {fileID: 9100000, guid: eea5d310fd36f27428826c2db241a63d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -811,8 +812,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 214.73, y: 43.36}
-  m_SizeDelta: {x: 355.9369, y: 18.945683}
+  m_AnchoredPosition: {x: 178.55, y: 30.8}
+  m_SizeDelta: {x: 283.58344, y: 15.137608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4646584279260076420
 CanvasRenderer:

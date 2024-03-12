@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float JumpForce;
     public float Speed;
     public Animator animator;
+    public float animSpeed;
 
     private float _fallVelocity = 0;
     private Vector3 _moveVector;
@@ -59,8 +60,8 @@ public class PlayerController : MonoBehaviour
             runDirectionw = -1;
         }
 
-        animator.SetFloat("w", runDirectionw);
-        animator.SetFloat("h", runDirectionh);
+        animator.SetFloat("w", runDirectionw, animSpeed, Time.deltaTime);
+        animator.SetFloat("h", runDirectionh, animSpeed, Time.deltaTime);
     }
 
     private void FixedUpdate()

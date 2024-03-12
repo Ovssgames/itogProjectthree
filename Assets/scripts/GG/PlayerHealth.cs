@@ -27,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
             playerIsDead();
         }
         DrawHealtBar();
+        
     }
 
     private void playerIsDead()
@@ -42,5 +43,11 @@ public class PlayerHealth : MonoBehaviour
     private void DrawHealtBar()
     {
         valueRectTransform.anchorMax =new Vector2(value/_maxValue , 1);
+    }
+    public void AddHealth(float amount)
+    {
+        value += amount;
+        value = Mathf.Clamp(value, 0, _maxValue);
+        DrawHealtBar();
     }
 }

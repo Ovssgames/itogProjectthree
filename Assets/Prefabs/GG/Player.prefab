@@ -366,6 +366,7 @@ MonoBehaviour:
   JumpForce: 10
   Speed: 5
   animator: {fileID: 6532650889274572458}
+  animSpeed: 0.2
 --- !u!114 &1770034835980021082
 MonoBehaviour:
   m_ObjectHideFlags: 0

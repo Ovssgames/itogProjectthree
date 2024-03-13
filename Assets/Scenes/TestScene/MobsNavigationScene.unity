@@ -430,6 +430,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267440874}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &481853388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5556
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.3446443
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.4436
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4965364616464846589, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365616183192419695, guid: 5e287f359423fc5478a3ed90107f5603,
+        type: 3}
+      propertyPath: m_Name
+      value: Mushroom
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e287f359423fc5478a3ed90107f5603, type: 3}
 --- !u!114 &498578105 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1770034835922421756, guid: acc30bfbe7df0204284f98d65dd8767d,
@@ -473,7 +542,7 @@ Transform:
   - {fileID: 1363955811}
   - {fileID: 1174486870}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712193129
 GameObject:
@@ -725,7 +794,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &880964577
 GameObject:
@@ -772,7 +841,7 @@ Transform:
   - {fileID: 1903180705}
   - {fileID: 712193130}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1032482681
 PrefabInstance:
@@ -1058,7 +1127,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.75}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1228709291
 MonoBehaviour:
@@ -1911,7 +1980,7 @@ Transform:
   m_Children:
   - {fileID: 1991002141}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1650546152
 MonoBehaviour:

@@ -6,6 +6,8 @@ public class AddKit : MonoBehaviour
 {
     public float healAmount = 50;
 
+
+
     
 
 
@@ -17,7 +19,7 @@ public class AddKit : MonoBehaviour
         if (playerHealt != null)
         {
             playerHealt.AddHealth(healAmount);
+            Destroy(gameObject);
         }
     }
-   
 }

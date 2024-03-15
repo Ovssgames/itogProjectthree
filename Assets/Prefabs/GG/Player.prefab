@@ -2231,6 +2231,7 @@ MonoBehaviour:
   zoomPosition: 0.45
   speed: 10
   isZoom: 1
+  animator: {fileID: 1713272371954231718}
 --- !u!1 &1713272372794555831
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,6 +3131,7 @@ MonoBehaviour:
   Gravity: 9.8
   JumpForce: 10
   Speed: 5
+  speedRun: 0
   animator: {fileID: 1713272371954231718}
   animSpeed: 0.2
 --- !u!114 &1713272373298293193

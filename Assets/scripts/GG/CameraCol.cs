@@ -7,8 +7,17 @@ public class CameraCol : MonoBehaviour
     public Transform CameraAxis;
     public float wishDistance = 2;
     public float zoomPosition;
+    public float speedAnimation;
     public float speed;
     public bool isZoom;
+    public Animator animator;
+
+    private PlayerController player;
+
+    private void Start()
+    {
+        player = GetComponent<PlayerController>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,13 +47,17 @@ public class CameraCol : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
-            wishDistance = Mathf.Lerp(wishDistance , zoomPosition , speed * Time.deltaTime);
+            wishDistance = Mathf.Lerp(wishDistance , zoomPosition , speedAnimation * Time.deltaTime);
             isZoom = true;
+            animator.SetBool("isZoom", true);
+            
         }
         else
         {
-            wishDistance = Mathf.Lerp(wishDistance , 2, speed * Time.deltaTime);
+            wishDistance = Mathf.Lerp(wishDistance , 2, speedAnimation * Time.deltaTime);
             isZoom = false;
+            animator.SetBool("isZoom", false);
+            
         }
     }
 }

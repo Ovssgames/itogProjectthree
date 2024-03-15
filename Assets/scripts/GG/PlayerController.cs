@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float Gravity = 9.8f;
     public float JumpForce;
     public float Speed;
+    public float speedRun;
+    public float speedRunIsZoom;
     public Animator animator;
     public float animSpeed;
 
@@ -23,6 +25,20 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         controllerUp();
+        RightMousRun();
+
+    }
+
+    private void RightMousRun()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            speedRun = speedRunIsZoom;
+        }
+        else
+        {
+            speedRun = 0.7f;
+        }
     }
 
     private void controllerUp()
@@ -38,25 +54,25 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            _moveVector += transform.forward;
+            _moveVector += transform.forward * speedRun;
             runDirectionh = 1;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            _moveVector -= transform.forward;
+            _moveVector -= transform.forward * speedRun;
             runDirectionh = -1;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            _moveVector += transform.right;
+            _moveVector += transform.right * speedRun;
             runDirectionw = 1;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            _moveVector -= transform.right;
+            _moveVector -= transform.right * speedRun;
             runDirectionw = -1;
         }
 

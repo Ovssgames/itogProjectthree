@@ -6,17 +6,18 @@ public class BulletCaster : MonoBehaviour
 {
     public GameObject BulletPrefab;
     public Transform BulletGun;
+    public Animator animator;
+    public float time;
 
-    private CameraCol _cameraCol;
+    private float _time;
+    
+    private CameraCol CameraCol;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-       
+        _time = time;
     }
 
-    // Update is called once per frame
     void Update()
     {
         BulletCast();
@@ -24,10 +25,13 @@ public class BulletCaster : MonoBehaviour
 
     private void BulletCast()
     {
-        if (Input.GetMouseButtonDown(0))
+        _time += Time.deltaTime;
+
+        if (Input.GetMouseButtonDown(0) && Input.GetMouseButton(1) && _time >= time)
         {
+            _time = 0;
             Instantiate(BulletPrefab, BulletGun.position, BulletGun.rotation);
-            
+            animator.SetTrigger("Shoot");
         }
     }
 }

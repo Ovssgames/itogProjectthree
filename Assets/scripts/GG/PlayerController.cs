@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private float _fallVelocity = 0;
     private Vector3 _moveVector;
+    private bool _isClickRightMouse;
 
     private CharacterController _CharacterController;
 
@@ -31,13 +32,23 @@ public class PlayerController : MonoBehaviour
 
     private void RightMousRun()
     {
+        _isClickRightMouse = false;
+
         if (Input.GetMouseButton(1))
         {
+            _isClickRightMouse = true;
             speedRun = speedRunIsZoom;
         }
-        else
+        if(_isClickRightMouse ==false)
         {
-            speedRun = 0.7f;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speedRun = 1f;
+            }
+            else
+            {
+                speedRun = 0.7f;
+            }
         }
     }
 

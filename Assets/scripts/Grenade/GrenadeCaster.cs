@@ -7,6 +7,7 @@ public class GrenadeCaster : MonoBehaviour
     public Rigidbody grenadePrefab;
     public Transform handGun;
     public float force;
+    public Animator animator;
 
     private Rigidbody _addForvard;
 
@@ -20,11 +21,12 @@ public class GrenadeCaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G) && Input.GetMouseButton(1))
         {
             var grenade = Instantiate(grenadePrefab);
             grenade.transform.position = handGun.position;
             grenade.GetComponent<Rigidbody>().AddForce(handGun.forward * force);
+            animator.SetTrigger("Shoot");
         }
     }
 }

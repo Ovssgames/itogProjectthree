@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _CharacterController.isGrounded)
         {
             _fallVelocity = -JumpForce;
+            animator.SetTrigger("jump");
         }
 
         if (Input.GetKey(KeyCode.W))

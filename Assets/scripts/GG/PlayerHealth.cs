@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject gameplayUI;
     public GameObject GameOverScreen;
+    public Animator animator;
+
 
     private float _maxValue;
 
@@ -25,6 +27,9 @@ public class PlayerHealth : MonoBehaviour
         if (value < 0)
         {
             playerIsDead();
+            animator.SetTrigger("death");
+            animator.SetLayerWeight(1, 0f);
+            animator.SetLayerWeight(2, 0f);
         }
         DrawHealtBar();
         

@@ -8,15 +8,13 @@ public class CameraCol : MonoBehaviour
     public float wishDistance = 2;
     public float zoomPosition;
     public float speedAnimation;
-    public float speed;
     public bool isZoom;
     public Animator animator;
 
-    private PlayerController player;
 
     private void Start()
     {
-        player = GetComponent<PlayerController>();
+      
     }
 
     // Update is called once per frame

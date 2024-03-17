@@ -6,8 +6,15 @@ public class EnemyHealth : MonoBehaviour
 {
     public float value = 100;
 
+    private EnemyDropProgress _enemyDropProgress;
 
-   
+    private void Start()
+    {
+        _enemyDropProgress = GetComponent<EnemyDropProgress>();
+    }
+
+
+
 
     // Update is called once per frame
     public void DealDamage(float damage)
@@ -15,6 +22,7 @@ public class EnemyHealth : MonoBehaviour
         value -= damage;
         if (value < 0)
         {
+            _enemyDropProgress.DropEnemyProgress();
             Destroy(gameObject);
         }
     }

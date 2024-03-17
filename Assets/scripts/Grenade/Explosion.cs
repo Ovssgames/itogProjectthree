@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    public float damage = 50;
     public float maxSize = 5;
     public float speed = 2;
 
@@ -24,4 +25,20 @@ public class Explosion : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var playerHealt = other.GetComponent<PlayerHealth>();
+        if(playerHealt != null)
+        {
+            playerHealt.DealDamage(damage);
+        }
+
+        var enemyHealth = other.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.DealDamage(damage);
+        }
+    }
+
 }

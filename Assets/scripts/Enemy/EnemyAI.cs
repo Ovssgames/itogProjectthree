@@ -5,81 +5,37 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    public List<Transform> PatrolPoint;
-    public PlayerController Player;
-    public float vievAngle;
     public float damage = 30;
 
     private NavMeshAgent _navMeshAgent;
-    private bool _isPlayerNoticed;
     private PlayerHealth _playerHeltUp;
+    private PlayerController PlayerController;
+    private EnemyAI _enemyAI;
 
     private void Start()
     {
         NavGetComponent();
-        PickPatroolPoint();
+        _enemyAI = GetComponent<EnemyAI>();
     }
 
     private void Update()
     {
-        PatrolUp();
-        Raycast();
         AttackUp();
+    }
+    private void NavGetComponent()
+    {
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        PlayerController = FindObjectOfType<PlayerController>();
+        _playerHeltUp = FindObjectOfType<PlayerHealth>();
     }
 
     void AttackUp()
     {
-        if (_isPlayerNoticed &&  _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+        _navMeshAgent.destination = PlayerController.transform.position;
+        if ( _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
         {
             _playerHeltUp.DealDamage(damage * Time.deltaTime);
         }
     }
 
-    private void NavGetComponent()
-    {
-        _navMeshAgent = GetComponent<NavMeshAgent>();
-        _playerHeltUp = Player.GetComponent<PlayerHealth>();
-    }
-
-    private void PickPatroolPoint()
-    {
-            _navMeshAgent.destination = PatrolPoint[Random.Range(0, PatrolPoint.Count)].position;
-    }
-
-
-    private void PatrolUp()
-    {
-        if (!_isPlayerNoticed)
-        {
-            if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
-            {
-                PickPatroolPoint();
-            }
-        }
-    }
-
-    private void Raycast()
-    {
-        var direction = Player.transform.position - transform.position;
-
-        _isPlayerNoticed = false;
-        if(Vector3.Angle(transform.forward, direction) < vievAngle)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position + Vector3.up, direction, out hit))
-            {
-                if (hit.collider.gameObject == Player.gameObject)
-                {
-                    _isPlayerNoticed = true;
-                }
-            }
-        }
-
-        if(_isPlayerNoticed)
-        {
-            _navMeshAgent.destination = Player.transform.position;
-        }
-        
-
-    }
 }

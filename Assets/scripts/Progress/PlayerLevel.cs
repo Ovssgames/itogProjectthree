@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playerlevel : MonoBehaviour
+public class PlayerLevel : MonoBehaviour
 {
-
 
     private ProgressPlus ProgressPlus;
     private AddKit Addkit;
@@ -14,6 +13,7 @@ public class Playerlevel : MonoBehaviour
     private GrenadeCaster GrenadeCaster;
     private Explosion Explosion;
 
+    public GameObject LevelMenu;
 
     private void Start()
     {
@@ -28,46 +28,89 @@ public class Playerlevel : MonoBehaviour
 
     public void ProgressOpit()
     {
-        ProgressPlus.progress *= 1.5f;
+        cursorDisable();
+        ProgressPlus.progress *= 2f;
+        LevelMenu.SetActive(false);
     }
 
     public void ProgressAddkit()
     {
+        cursorDisable();
         Addkit.healAmount *= 1.5f;
+        LevelMenu.SetActive(false);
     }
 
     public void ProgressMaxXP()
     {
+        cursorDisable();
         PlayerHealth._maxValue *= 1.5f;
+        LevelMenu.SetActive(false);
     }
 
     public void ProgressMaxBullet()
     {
+        cursorDisable();
         BulletCaster.maxKolvoBullet *= 2;
+        LevelMenu.SetActive(false);
     }
     public void ProgressBulletTime()
     {
+        cursorDisable();
         BulletCaster._timeAnimation /= 1.5f;
+        LevelMenu.SetActive(false);
     }
     public void ProgressDamageBullet()
     {
-        Bullet.damage *= 1.5f;
+        cursorDisable();
+        Bullet.Mndamage(1.5f);
+        LevelMenu.SetActive(false);
     }
     public void ProgressGrenateOpen()
     {
-        GrenadeCaster.grenadeOpen = true;
+        if (GrenadeCaster.grenadeOpen == false)
+        {
+            cursorDisable();
+            GrenadeCaster.grenadeOpen = true;
+            LevelMenu.SetActive(false);
+        }
+        else
+        {
 
+        }
     }
     public void ProgressGrenatedamage()
     {
+        if (GrenadeCaster.grenadeOpen == true)
+        {
+            cursorDisable();
+            Explosion.damage *= 1.5f;
+            LevelMenu.SetActive(false);
 
+        }
+        else
+        {
+
+        }
     }
     public void ProgressgrenateInv()
     {
+        if (GrenadeCaster.grenadeOpen == true)
+        {
+            cursorDisable();
+            GrenadeCaster.maxGremade *= 2;
+            LevelMenu.SetActive(false);
+        }
+        else
+        {
 
+        }
     }
-    public void ProgressRadius()
+
+    private void cursorDisable()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
 
     }
 }

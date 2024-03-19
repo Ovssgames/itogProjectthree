@@ -25,6 +25,7 @@ public class Bullet : MonoBehaviour
         BulletFixedUpdate();
     }
 
+    
     private void BulletFixedUpdate()
     {
         transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);     //движение пули по оси z

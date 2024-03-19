@@ -15,7 +15,7 @@ public class GrenadeCaster : MonoBehaviour
     private Rigidbody _addForvard;
 
     public int kolvoGrenade;
-    private int maxGremade = 3;
+    public int maxGremade = 3;
 
     
 

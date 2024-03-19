@@ -7,6 +7,7 @@ public class PlayerProgress : MonoBehaviour
 {
     public RectTransform experienceValueRectTransform;
     public TextMeshProUGUI levelValueTMP;
+    public GameObject CanvasLevelMenu;
 
 
     private int _levelValue = 1;
@@ -28,6 +29,15 @@ public class PlayerProgress : MonoBehaviour
         {
             _levelValue++;
             _experienceCurrentValue = 0;
+            _experienceTargetValue *= 1.5f;
+
+            CanvasLevelMenu.SetActive(true);
+
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            Time.timeScale = 0;
         }
     }
 

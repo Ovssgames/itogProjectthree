@@ -7,12 +7,15 @@ public class Explosion : MonoBehaviour
     public float damage = 50;
     public float maxSize = 5;
     public float speed = 2;
+    public GameObject LevelMenu;
 
     private Vector3 _maxVector3Size;
+    private GrenadeCaster GrenadeCaster;
 
     // Start is called before the first frame update
     void Start()
     {
+        GrenadeCaster = FindObjectOfType<GrenadeCaster>();
         transform.localScale = Vector3.zero;
     }
 
@@ -29,7 +32,7 @@ public class Explosion : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var playerHealt = other.GetComponent<PlayerHealth>();
-        if(playerHealt != null)
+        if (playerHealt != null)
         {
             playerHealt.DealDamage(damage);
         }
@@ -41,4 +44,38 @@ public class Explosion : MonoBehaviour
         }
     }
 
+
+    public void ProgressRadius()
+    {
+        if (GrenadeCaster.grenadeOpen == true)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1f;
+            maxSize *= 1.5f;
+            LevelMenu.SetActive(false);
+
+        }
+        else
+        {
+
+        }
+    }
+
+    public void ProgressGrenatedamage()
+    {
+        if (GrenadeCaster.grenadeOpen == true)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1f;
+            damage *= 1.5f;
+            LevelMenu.SetActive(false);
+
+        }
+        else
+        {
+
+        }
+    }
 }

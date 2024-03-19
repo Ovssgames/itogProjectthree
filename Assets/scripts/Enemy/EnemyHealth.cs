@@ -7,10 +7,12 @@ public class EnemyHealth : MonoBehaviour
     public float value = 100;
 
     private EnemyDropProgress _enemyDropProgress;
+    private EnemyDrop _EnemyDrop;
 
     private void Start()
     {
         _enemyDropProgress = GetComponent<EnemyDropProgress>();
+        _EnemyDrop = GetComponent<EnemyDrop>();
     }
 
 
@@ -23,6 +25,7 @@ public class EnemyHealth : MonoBehaviour
         if (value < 0)
         {
             _enemyDropProgress.DropEnemyProgress();
+            _EnemyDrop.DropDorp();
             Destroy(gameObject);
         }
     }

@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 6785249682120313403}
   - component: {fileID: 6785249682120313402}
   - component: {fileID: 8200026356306950976}
+  - component: {fileID: 8599394609240609244}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -219,6 +220,23 @@ MonoBehaviour:
   progressPrefab: {fileID: 1882804131012369528, guid: 8dc9b6a1cab860f4aa3e09fe5e4dd8ee,
     type: 3}
   force: 100
+--- !u!114 &8599394609240609244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785249682120313399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68aa2a15f253be446aac33a5a3f92166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addkitDropPrefab: {fileID: 7899892059786769116, guid: aa0296d3b77690a478e04f5f0a1125d9,
+    type: 3}
+  grenadeDropPrefab: {fileID: 3664836819397884580, guid: 7940c7de0dc82a94084f4789c3f4a485,
+    type: 3}
+  ChanseAddkit: 65
 --- !u!1 &7111707880144146366
 GameObject:
   m_ObjectHideFlags: 0

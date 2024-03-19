@@ -14,9 +14,9 @@ public class BulletCaster : MonoBehaviour
     public int kolvoBullet;
     public int maxKolvoBullet;
     public TextMeshProUGUI textR;
+    public float _timeAnimation;
 
     private float _time;
-    private float _timeAnimation;
     private bool _isReload = false;
 
     private CameraCol CameraCol;

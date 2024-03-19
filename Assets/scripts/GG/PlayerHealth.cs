@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public Animator animator;
 
 
-    private float _maxValue;
+    public float _maxValue;
 
     private void Start()
     {

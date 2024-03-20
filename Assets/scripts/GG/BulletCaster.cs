@@ -5,7 +5,7 @@ using TMPro;
 
 public class BulletCaster : MonoBehaviour
 {
-    public GameObject BulletPrefab;
+    public Bullet BulletPrefab;
     public Transform BulletGun;
     public Animator animator;
     public float time;
@@ -14,7 +14,9 @@ public class BulletCaster : MonoBehaviour
     public int kolvoBullet;
     public int maxKolvoBullet;
     public TextMeshProUGUI textR;
+    public float damage = 10;
     public float _timeAnimation;
+
 
     private float _time;
     private bool _isReload = false;
@@ -31,6 +33,7 @@ public class BulletCaster : MonoBehaviour
         BulletCast();
         ReloadGun();
     }
+
 
     private void ReloadGun()
     {
@@ -62,6 +65,8 @@ public class BulletCaster : MonoBehaviour
             kolvoBullet--;
 
             Instantiate(BulletPrefab, BulletGun.position, BulletGun.rotation);
+            
+
             animator.SetTrigger("Shoot");
         }
     }

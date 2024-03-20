@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public float damage = 50;
-    public float maxSize = 5;
     public float speed = 2;
     public GameObject LevelMenu;
 
@@ -23,7 +21,9 @@ public class Explosion : MonoBehaviour
     void Update()
     {
         transform.localScale += Vector3.one * Time.deltaTime * speed;
-        if(transform.localScale.z > maxSize)
+
+        var t = GrenadeCaster.maxSize;
+        if(transform.localScale.z > t)
         {
             Destroy(gameObject);
         }
@@ -32,50 +32,17 @@ public class Explosion : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var playerHealt = other.GetComponent<PlayerHealth>();
+        float grenadeDamage = GrenadeCaster.damage;
+
         if (playerHealt != null)
         {
-            playerHealt.DealDamage(damage);
+            playerHealt.DealDamage(grenadeDamage);
         }
 
         var enemyHealth = other.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
-            enemyHealth.DealDamage(damage);
-        }
-    }
-
-
-    public void ProgressRadius()
-    {
-        if (GrenadeCaster.grenadeOpen == true)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            Time.timeScale = 1f;
-            maxSize *= 1.5f;
-            LevelMenu.SetActive(false);
-
-        }
-        else
-        {
-
-        }
-    }
-
-    public void ProgressGrenatedamage()
-    {
-        if (GrenadeCaster.grenadeOpen == true)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            Time.timeScale = 1f;
-            damage *= 1.5f;
-            LevelMenu.SetActive(false);
-
-        }
-        else
-        {
-
+            enemyHealth.DealDamage(grenadeDamage);
         }
     }
 }

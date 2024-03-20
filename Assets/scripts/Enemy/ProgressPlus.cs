@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ProgressPlus : MonoBehaviour
 {
-    public float progress;
     public GameObject Sphere;
 
     private PlayerProgress _playerProgress;
+
 
     private void Start()
     {
@@ -17,9 +17,10 @@ public class ProgressPlus : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var isPlayer = other.GetComponent<PlayerProgress>();
+        float e = _playerProgress.progress;
         if (isPlayer != null)
         {
-            _playerProgress.AddExperience(progress);
+            _playerProgress.AddExperience(e);
             Destroy(gameObject);
             Destroy(Sphere);
         }

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerLevel : MonoBehaviour
 {
+    public GameObject LevelMenu;
 
     private ProgressPlus ProgressPlus;
     private AddKit Addkit;
@@ -12,24 +14,30 @@ public class PlayerLevel : MonoBehaviour
     private Bullet Bullet;
     private GrenadeCaster GrenadeCaster;
     private Explosion Explosion;
+    private PlayerProgress PlayerProgress;
 
-    public GameObject LevelMenu;
+
 
     private void Start()
     {
+
         ProgressPlus = FindObjectOfType<ProgressPlus>();//опыт
         Addkit = FindObjectOfType<AddKit>();// xp
         PlayerHealth = FindObjectOfType<PlayerHealth>();
         BulletCaster = FindObjectOfType<BulletCaster>();
-        Bullet = FindObjectOfType<Bullet>();
         GrenadeCaster = FindObjectOfType<GrenadeCaster>();
         Explosion = FindObjectOfType<Explosion>();
+        PlayerProgress = FindObjectOfType<PlayerProgress>();
+    }
+
+    private void Update()
+    {
     }
 
     public void ProgressOpit()
     {
         cursorDisable();
-        ProgressPlus.progress *= 2f;
+        PlayerProgress.progress *= 2f;
         LevelMenu.SetActive(false);
     }
 
@@ -62,7 +70,7 @@ public class PlayerLevel : MonoBehaviour
     public void ProgressDamageBullet()
     {
         cursorDisable();
-        Bullet.Mndamage(1.5f);
+        BulletCaster.damage *= 1.5f;
         LevelMenu.SetActive(false);
     }
     public void ProgressGrenateOpen()
@@ -83,7 +91,7 @@ public class PlayerLevel : MonoBehaviour
         if (GrenadeCaster.grenadeOpen == true)
         {
             cursorDisable();
-            Explosion.damage *= 1.5f;
+            GrenadeCaster.damage *= 1.5f;
             LevelMenu.SetActive(false);
 
         }
@@ -99,6 +107,20 @@ public class PlayerLevel : MonoBehaviour
             cursorDisable();
             GrenadeCaster.maxGremade *= 2;
             LevelMenu.SetActive(false);
+        }
+        else
+        {
+
+        }
+    }
+    public void ProgressRadius()
+    {
+        if (GrenadeCaster.grenadeOpen == true)
+        {
+            cursorDisable();
+            GrenadeCaster.maxSize *= 1.5f;
+            LevelMenu.SetActive(false);
+
         }
         else
         {

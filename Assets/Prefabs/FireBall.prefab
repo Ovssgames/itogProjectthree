@@ -127,6 +127,7 @@ MonoBehaviour:
   speed: 40
   lifetime: 6
   damage: 10
+  LevelMenu: {fileID: 0}
 --- !u!96 &8196526879040706566
 TrailRenderer:
   serializedVersion: 2

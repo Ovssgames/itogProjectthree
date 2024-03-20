@@ -2194,10 +2194,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5080088632717579284, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607755870195896850, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: BulletPrefab
+      value: 
+      objectReference: {fileID: 7384330520411887408, guid: bf8c71329ea062e47bd1cd2a7bfb2fbd,
+        type: 3}
     - target: {fileID: 7607755870195896852, guid: acc30bfbe7df0204284f98d65dd8767d,
         type: 3}
       propertyPath: grenadeOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7607755870195896855, guid: acc30bfbe7df0204284f98d65dd8767d,
         type: 3}

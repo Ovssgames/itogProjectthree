@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public int lifetime;
-    public float damage = 10;
+    
 
     
 
@@ -48,10 +48,11 @@ public class Bullet : MonoBehaviour
         var enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
-            
-            enemyHealth.DealDamage(damage);
+            float e = FindObjectOfType<BulletCaster>().damage;
+            enemyHealth.DealDamage(e);
         }
     }
+
 
 
 }

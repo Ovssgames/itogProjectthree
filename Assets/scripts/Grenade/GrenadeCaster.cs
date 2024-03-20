@@ -11,6 +11,8 @@ public class GrenadeCaster : MonoBehaviour
     public Animator animator;
     public bool grenadeOpen = false;
     public TextMeshProUGUI textGrenade;
+    public float damage = 40;
+    public float maxSize = 5;
 
     private Rigidbody _addForvard;
 

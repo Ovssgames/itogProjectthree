@@ -8,6 +8,7 @@ public class PlayerProgress : MonoBehaviour
     public RectTransform experienceValueRectTransform;
     public TextMeshProUGUI levelValueTMP;
     public GameObject CanvasLevelMenu;
+    public float progress = 20;
 
 
     private int _levelValue = 1;

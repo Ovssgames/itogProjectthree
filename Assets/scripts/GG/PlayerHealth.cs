@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float value = 100;
     public RectTransform valueRectTransform;
+    public float healAmount = 50;
 
     public GameObject gameplayUI;
     public GameObject GameOverScreen;

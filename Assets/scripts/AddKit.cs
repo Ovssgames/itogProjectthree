@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class AddKit : MonoBehaviour
 {
-    public float healAmount = 50;
+    private PlayerHealth _PlayerHealth;
+
+    private void Start()
+    {
+        _PlayerHealth = FindObjectOfType<PlayerHealth>();
+    }
 
 
-
-    
 
 
 
@@ -18,7 +21,8 @@ public class AddKit : MonoBehaviour
         var playerHealt = other.GetComponent<PlayerHealth>();
         if (playerHealt != null)
         {
-            playerHealt.AddHealth(healAmount);
+            var r = _PlayerHealth.healAmount;
+            playerHealt.AddHealth(r);
             Destroy(gameObject);
         }
     }

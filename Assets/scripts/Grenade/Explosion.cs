@@ -6,6 +6,7 @@ public class Explosion : MonoBehaviour
 {
     public float speed = 2;
     public GameObject LevelMenu;
+    public GameObject effectPrefab;
 
     private Vector3 _maxVector3Size;
     private GrenadeCaster GrenadeCaster;
@@ -27,6 +28,8 @@ public class Explosion : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        effectPrefab.transform.localScale = new Vector3(t / 2.5f, t / 2.5f, t / 2.5f);
     }
 
     private void OnTriggerEnter(Collider other)

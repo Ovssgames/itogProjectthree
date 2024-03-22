@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 15
+  player: {fileID: 0}
+  vievAngle: 90
 --- !u!114 &6785249682120313403
 MonoBehaviour:
   m_ObjectHideFlags: 0

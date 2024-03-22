@@ -44,7 +44,7 @@ public class PlayerLevel : MonoBehaviour
     public void ProgressAddkit()
     {
         cursorDisable();
-        Addkit.healAmount *= 1.5f;
+        PlayerHealth.healAmount *= 1.5f;
         LevelMenu.SetActive(false);
     }
 

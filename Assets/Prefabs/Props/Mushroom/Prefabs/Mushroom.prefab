@@ -128,3 +128,5 @@ MonoBehaviour:
   delay: 3
   explosionprefab: {fileID: 2087004515204202058, guid: bbf689650837c02469dc5879e2018540,
     type: 3}
+  effectPrefab: {fileID: 6163066024595888598, guid: b31db55398c9c26479c5e3a298e2a8da,
+    type: 3}

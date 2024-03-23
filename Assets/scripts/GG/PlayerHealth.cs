@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
+        healAmount = 50;
         gameplayUI.SetActive(true);
         _maxValue = value;
         DrawHealtBar();

@@ -64,7 +64,7 @@ public class PlayerLevel : MonoBehaviour
     public void ProgressBulletTime()
     {
         cursorDisable();
-        BulletCaster._timeAnimation /= 1.5f;
+        BulletCaster.time /= 1.5f;
         LevelMenu.SetActive(false);
     }
     public void ProgressDamageBullet()

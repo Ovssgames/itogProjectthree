@@ -9,7 +9,10 @@ public class SpawnEnemy : MonoBehaviour
 
     private float _time;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        Instantiate(EnemyPrefab, transform.position, transform.rotation);
+    }
     void Update()
     {
         _time += Time.deltaTime;

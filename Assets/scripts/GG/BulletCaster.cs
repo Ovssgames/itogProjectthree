@@ -25,7 +25,10 @@ public class BulletCaster : MonoBehaviour
 
     private void Start()
     {
+        maxKolvoBullet = 10;
+        time = 0.3f;
         _time = time;
+        damage = 10;
     }
 
     void Update()

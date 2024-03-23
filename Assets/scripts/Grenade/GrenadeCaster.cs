@@ -26,7 +26,10 @@ public class GrenadeCaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        grenadeOpen = false;
+        damage = 40;
+        maxGremade = 3;
+        maxSize = 5;
     }
 
     // Update is called once per frame

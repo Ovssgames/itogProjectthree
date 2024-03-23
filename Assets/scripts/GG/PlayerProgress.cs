@@ -16,6 +16,10 @@ public class PlayerProgress : MonoBehaviour
     private float _experienceCurrentValue = 0;
     private float _experienceTargetValue = 100;
 
+    private void Start()
+    {
+        progress = 20;
+    }
 
     private void Update()
     {

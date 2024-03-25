@@ -9,6 +9,8 @@ public class BulletCaster : MonoBehaviour
     public Transform BulletGun;
     public Animator animator;
     public float time;
+    public AudioSource shoot;
+    public AudioSource reloadGun;
 
     public float timeAnimation;
     public int kolvoBullet;
@@ -47,6 +49,7 @@ public class BulletCaster : MonoBehaviour
             _timeAnimation = 0;
             _isReload = true;
             animator.SetTrigger("reload");
+            reloadGun.Play();
         }
         if (_timeAnimation >= timeAnimation && _isReload == true)
         {
@@ -66,6 +69,8 @@ public class BulletCaster : MonoBehaviour
         {
             _time = 0;
             kolvoBullet--;
+
+            shoot.Play();
 
             Instantiate(BulletPrefab, BulletGun.position, BulletGun.rotation);
             

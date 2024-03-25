@@ -485,7 +485,6 @@ GameObject:
   - component: {fileID: 4150011011883851806}
   - component: {fileID: 2342654843743030314}
   - component: {fileID: 1129185469275514195}
-  - component: {fileID: 4895063675744204553}
   - component: {fileID: 8488654375519749916}
   m_Layer: 0
   m_Name: GrenadeDrop
@@ -590,21 +589,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &4895063675744204553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3664836819397884580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c7ddda146c76143a053a102e33573c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnProgress: []
-  progressPrefab: {fileID: 0}
-  force: 0
 --- !u!114 &8488654375519749916
 MonoBehaviour:
   m_ObjectHideFlags: 0

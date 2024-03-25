@@ -8,6 +8,13 @@ public class EnemyDropProgress : MonoBehaviour
     public GameObject progressPrefab;
     public float force;
 
+    private CameraCol CameraCol;
+
+    private void Start()
+    {
+        CameraCol = FindObjectOfType<CameraCol>();
+    }
+
     public void DropEnemyProgress()
     {
         for(int i = 0; i < spawnProgress.Count; i++)

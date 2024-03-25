@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float speedRunIsZoom;
     public Animator animator;
     public float animSpeed;
+    public AudioSource runAudio;
 
     private float _fallVelocity = 0;
     private Vector3 _moveVector;
@@ -86,6 +87,11 @@ public class PlayerController : MonoBehaviour
         {
             _moveVector -= transform.right * speedRun;
             runDirectionw = -1;
+        }
+        
+        if((Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D)) && _CharacterController.isGrounded)
+        {
+            runAudio.Play();
         }
 
         animator.SetFloat("w", runDirectionw, animSpeed, Time.deltaTime);

@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 2
+  noActiveDistance: 30
+  TrigerProgress: {fileID: 5576376451942637714}
 --- !u!108 &6432378087903422012
 Light:
   m_ObjectHideFlags: 0
@@ -293,5 +295,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57f2c39b1db6084cb6d42ec730668c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progress: 20
   Sphere: {fileID: 1882804131012369528}

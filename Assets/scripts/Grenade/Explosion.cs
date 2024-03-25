@@ -10,12 +10,14 @@ public class Explosion : MonoBehaviour
 
     private Vector3 _maxVector3Size;
     private GrenadeCaster GrenadeCaster;
+    private PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
         GrenadeCaster = FindObjectOfType<GrenadeCaster>();
         transform.localScale = Vector3.zero;
+        playerController = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame

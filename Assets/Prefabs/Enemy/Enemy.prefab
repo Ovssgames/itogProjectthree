@@ -9,7 +9,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697876885027202380}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: e1f97bcde6a6d32488fe7bbaf9e43e81, type: 3}
   m_Controller: {fileID: 9100000, guid: b33a38c3135c459448563adbfcda60b6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   vievAngle: 90
+  Animator: {fileID: 8989390862998709121}
 --- !u!114 &6785249682120313403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 50
+  Animator: {fileID: 8989390862998709121}
+  enablet: {fileID: 4537319249191214786}
 --- !u!136 &6785249682120313402
 CapsuleCollider:
   m_ObjectHideFlags: 0

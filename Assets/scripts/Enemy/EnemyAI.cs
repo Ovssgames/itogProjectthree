@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     public float damage = 30;
     public float vievAngle;
+    public Animator Animator;
 
     private NavMeshAgent _navMeshAgent;
     private PlayerHealth _playerHeltUp;
@@ -54,9 +55,14 @@ public class EnemyAI : MonoBehaviour
     void AttackUp()
     {
         _navMeshAgent.destination = PlayerController.transform.position;
-        if ( _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance && _isRayDirection)
+        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance && _isRayDirection)
         {
             _playerHeltUp.DealDamage(damage * Time.deltaTime);
+            Animator.SetBool("isAttack", true);
+        }
+        else
+        {
+            Animator.SetBool("isAttack", false);
         }
     }
 

@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject gameplayUI;
     public GameObject GameOverScreen;
     public Animator animator;
+    public GameObject audioSource;
 
 
     public float _maxValue;
@@ -21,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
         gameplayUI.SetActive(true);
         _maxValue = value;
         DrawHealtBar();
+        audioSource.SetActive(false);
     }
 
     public void DealDamage(float damage)
@@ -32,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
             animator.SetTrigger("death");
             animator.SetLayerWeight(1, 0f);
             animator.SetLayerWeight(2, 0f);
+            audioSource.SetActive(true);
         }
         DrawHealtBar();
         

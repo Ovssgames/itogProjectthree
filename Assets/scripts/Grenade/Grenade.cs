@@ -20,5 +20,6 @@ public class Grenade : MonoBehaviour
         explosion.transform.position = transform.position;
         var effect = Instantiate(effectPrefab);
         effect.transform.position = transform.position;
+        FindObjectOfType<PlayerController>().bamAudio.Play();
     }
 }

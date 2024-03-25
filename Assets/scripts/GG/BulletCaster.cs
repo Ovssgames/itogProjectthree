@@ -74,7 +74,6 @@ public class BulletCaster : MonoBehaviour
 
             Instantiate(BulletPrefab, BulletGun.position, BulletGun.rotation);
             
-
             animator.SetTrigger("Shoot");
         }
     }

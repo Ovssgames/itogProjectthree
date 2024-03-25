@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public float animSpeed;
     public AudioSource runAudio;
+    public AudioSource bamAudio;
 
     private float _fallVelocity = 0;
     private Vector3 _moveVector;
@@ -28,7 +29,6 @@ public class PlayerController : MonoBehaviour
     {
         controllerUp();
         RightMousRun();
-
     }
 
     private void RightMousRun()
@@ -89,9 +89,13 @@ public class PlayerController : MonoBehaviour
             runDirectionw = -1;
         }
         
-        if((Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.S)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D)) && _CharacterController.isGrounded)
+        if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && _CharacterController.isGrounded)
         {
-            runAudio.Play();
+            runAudio.enabled = true;
+        }
+        else
+        {
+            runAudio.enabled = false;
         }
 
         animator.SetFloat("w", runDirectionw, animSpeed, Time.deltaTime);

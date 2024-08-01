@@ -19,7 +19,8 @@ public class SpawnEnemy : MonoBehaviour
         _timeSpawn += Time.deltaTime;
         if (_timeSpawn > 120)
         {
-            time *= 0.65f;
+            _timeSpawn = 0;
+            time *= 0.75f;
         }
 
         _time += Time.deltaTime;

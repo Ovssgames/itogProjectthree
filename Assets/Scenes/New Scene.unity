@@ -1927,6 +1927,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 843005426412670769, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225944888321801861, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137444480920092245, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2662482627674117819, guid: acc30bfbe7df0204284f98d65dd8767d,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1987,6 +2002,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3421231625071566210, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195109657380027323, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6361920908865135715, guid: acc30bfbe7df0204284f98d65dd8767d,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1997,10 +2022,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6509649498213584531, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6742229757599806494, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: value
+      value: 1e+9
+      objectReference: {fileID: 0}
     - target: {fileID: 7703823042927467884, guid: acc30bfbe7df0204284f98d65dd8767d,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928128363093288318, guid: acc30bfbe7df0204284f98d65dd8767d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acc30bfbe7df0204284f98d65dd8767d, type: 3}
